@@ -2,7 +2,7 @@ import { Routes } from '@angular/router';
 import { SemakanSamanComponent } from './semakan-saman/semakan-saman.component';
 import { PagetestComponent } from './pagetest/pagetest.component';
 import { DirektoriComponent } from './direktori/direktori.component';
-import { KataLaluanComponent } from './kata-laluan/kata-laluan.component';
+import { ChangePasswordComponent } from './kata-laluan/kata-laluan.component';
 import { KemasKiniComponent } from './kemas-kini/kemas-kini.component';
 import { LesenkenderaanComponent } from './lesenkenderaan/lesenkenderaan.component';
 import { PaparanUtamaComponent } from './paparan-utama/paparan-utama.component';
@@ -31,7 +31,7 @@ export const routes: Routes = [
     },
     {
         path: 'katalaluan',
-        component: KataLaluanComponent
+        component: ChangePasswordComponent
     },
     {
         path: 'kemaskini',
