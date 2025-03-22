@@ -1,0 +1,43 @@
+/* Main Layout */
+.layout {
+    display: flex;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Prevents scrolling for sidebar & topnav */
+}
+
+/* Sidebar (Fixed, Non-Scrollable) */
+.sidebar {
+    width: 250px;
+    height: 100vh; /* Full height */
+    background: linear-gradient(180deg, #0a2856 0%, #133771 100%);
+    color: white;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.15);
+    flex-shrink: 0;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+/* Content Area (Holds TopNav + Main Content) */
+.content-area {
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Takes remaining space */
+    height: 100vh;
+    overflow: hidden; /* Prevents topnav from scrolling */
+}
+
+/* Top Navigation (Fixed, Stops at Sidebar) */
+.topnav {
+     /* Stops at sidebar */
+    height: auto; /* Adjust as needed */
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+}
+
+/* Main Content (Scrollable) */
+.main-content {
+    overflow-y: auto; /* Allows scrolling */
+
+    background-color: #f4f4f4;
+}

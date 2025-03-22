@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'jpjDesk' title`, () => {
+  it(`should have the 'MyJPJ-Web' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('jpjDesk');
+    expect(app.title).toEqual('MyJPJ-Web');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, jpjDesk');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, MyJPJ-Web');
   });
 });

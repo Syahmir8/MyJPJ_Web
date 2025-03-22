@@ -1,0 +1,58 @@
+<!-- HTML Component -->
+<nav class="sidebar">
+    <div class="sidebar-header">
+      <h2><a [routerLink]="['/']">MyJPJ</a></h2>
+    </div>
+    
+    <div class="user-profile">
+      <div class="user-avatar">
+        <img src="assets/profile.png" alt="User Profile">
+      </div>
+      <div class="user-info">
+        <h3>SYAFIQA ANEESA</h3>
+        <h3>BINTI JOHARI</h3>
+        <div style="height: 10px;"></div>
+        <div class="user-meta">
+          <span class="user-type"><i class="fas fa-user-circle"></i> Orang Awam Malaysia</span>
+          <span class="user-email"><i class="fas fa-envelope"></i> syafiqajohari&#64;gmail.com</span>
+          <span class="user-status"><i class="fas fa-certificate"></i> STANDARD</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="sidebar-divider"></div>
+    
+    <ul class="sidebar-menu">
+      <li>
+        <a [routerLink]="['/profil']" routerLinkActive="active">
+          <i class="fas fa-user"></i>
+          <span>Profil</span>
+        </a>
+      </li>
+      <li>
+        <a [routerLink]="['/direktori']" routerLinkActive="active">
+          <i class="fas fa-folder"></i>
+          <span>Direktori</span>
+        </a>
+      </li>
+      <li>
+        <a [routerLink]="['/peti-masuk']" routerLinkActive="active">
+          <i class="fas fa-envelope"></i>
+          <span>Peti Masuk</span>
+        </a>
+      </li>
+      <li>
+        <a [routerLink]="['/settings']" routerLinkActive="active">
+          <i class="fas fa-gear"></i>
+          <span>Settings</span>
+        </a>
+      </li>
+    </ul>
+    
+    <div class="sidebar-footer">
+      <a [routerLink]="['/logout']">
+        <i class="fas fa-sign-out-alt"></i>
+        <span>Log Keluar</span>
+      </a>
+    </div>
+  </nav>

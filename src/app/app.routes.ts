@@ -5,18 +5,16 @@ import { DirektoriComponent } from './direktori/direktori.component';
 import { KataLaluanComponent } from './kata-laluan/kata-laluan.component';
 import { KemasKiniComponent } from './kemas-kini/kemas-kini.component';
 import { LesenkenderaanComponent } from './lesenkenderaan/lesenkenderaan.component';
-import { PaparanUtamaComponent } from './paparan-utama/paparan-utama.component';
+import { HomeComponent } from './home/home.component';
 import { PembaharuanLesenComponent } from './pembaharuan-lesen/pembaharuan-lesen.component';
 import { PemilikanComponent } from './pemilikan/pemilikan.component';
 import { PetiMasukComponent } from './peti-masuk/peti-masuk.component';
 import { ProfilComponent } from './profil/profil.component';
+import { SettingsComponent } from './settings/settings.component';
 
 export const routes: Routes = [
-    {
-        path: '',
-        redirectTo: 'semakansaman',
-        pathMatch: 'full'
-    },
+    { path: '', component: HomeComponent },
+    { path: 'settings', component: SettingsComponent },
     {
         path: 'semakansaman',
         component: SemakanSamanComponent
@@ -42,10 +40,6 @@ export const routes: Routes = [
         component: LesenkenderaanComponent
     },
     {
-        path: 'paparanutama',
-        component: PaparanUtamaComponent
-    },
-    {
         path: 'pembaharuanlesen',
         component: PembaharuanLesenComponent
     },
@@ -54,7 +48,7 @@ export const routes: Routes = [
         component: PemilikanComponent
     },
     {
-        path: 'petimasuk',
+        path: 'peti-masuk',
         component: PetiMasukComponent
     },
     {

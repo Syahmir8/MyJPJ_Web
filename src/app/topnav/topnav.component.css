@@ -1,0 +1,94 @@
+/* Header Styles */
+.header {
+    background: linear-gradient(80deg, #0056b3 0%, #0a2463 100%);
+    color: white;
+    padding: 12px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    width: 100%;
+    height: auto;
+  }
+  
+
+  
+  /* Logo Section */
+  .header-logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .jpj-logo {
+    width: 100px;
+    height: auto;
+    margin-right: 12px;
+  }
+  
+  .header-title h2 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  
+  .header-title p {
+    font-size: 12px;
+    opacity: 0.8;
+  }
+  
+  /* Navigation Menu */
+  .main-nav {
+    display: flex;
+    align-items: center; /* Keeps items aligned */
+    gap: 16px; /* Adds spacing between menu items */
+    margin-left: auto; /* Pushes the nav to the right */
+}
+  
+  .main-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 18px;
+    font-size: 16px;
+    border-left: 2px solid rgba(255, 255, 255, 0.2);
+    transition: background 0.3s, transform 0.2s;
+    border-radius: 6px; /* Slight rounded corners */
+    margin-left: 8px;
+  }
+  
+  .main-nav a:last-child {
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .main-nav a:hover,
+  .main-nav a.active {
+    background-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px); /* Smooth lift effect */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      text-align: center;
+      border-radius: 0 0 16px 16px;
+    }
+  
+    .header-logo {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .main-nav {
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 12px;
+    }
+  
+    .main-nav a {
+      border: none;
+      padding: 10px 20px;
+      width: 100%;
+      text-align: center;
+    }
+  }
+  
