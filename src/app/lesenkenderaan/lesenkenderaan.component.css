@@ -75,12 +75,18 @@ background: #c4c4c4;
 }
 
 /* Date Text */
-.generated-date {
+.generated-date{
 color: gray;
 font-size: 14px;
-margin-left: 345px;
+margin-left: 280px;
 align-items: center;
 }
+.last-reload{
+    color: gray;
+    font-size: 14px;
+    margin-left: 0px;
+    align-items: center;
+    }
 
 /* Dropdown */
 .select-dropdown {

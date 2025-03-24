@@ -17,6 +17,7 @@ import {
 
   imports: [RouterModule, CommonModule, FontAwesomeModule],
 
+
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

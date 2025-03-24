@@ -15,17 +15,32 @@ export class LesenkenderaanComponent implements OnInit {
   selectedVehicle: string = '';
   generatedDate: string = '';
   vehicleInfoVisible: boolean = false;
+  lastReload: string = '';
+  private intervalId: any;
 
   ngOnInit(): void {
-    this.generatedDate = this.formatDate(new Date());
+    this.updateLastReload();
+  }
+  updateLastReload(): void {
+    const now = new Date();
+    this.lastReload = now.toLocaleString('ms-MY', {
+      weekday: 'long',
+      day: '2-digit',
+      month: 'long',
+      year: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+      hour12: false
+    });
   }
 
   toggleVehicleInfo() {
     this.vehicleInfoVisible = !!this.selectedVehicle;  // Show if selectedVehicle has a value
   }
 
-  reloadPage() {
-    location.reload();
+  reloadPage(): void {
+    this.updateLastReload(); // ✅ Updates last reload time
   }
 
   formatDate(date: Date): string {
@@ -44,6 +59,12 @@ export class LesenkenderaanComponent implements OnInit {
       this.router.navigate(['/']);;
     } else if (index === 2) {
       this.router.navigate(['/pemilikan']);;
+    }
+  }
+
+  ngOnDestroy() {
+    if (this.intervalId) {
+      clearInterval(this.intervalId); // Stop the interval when component is destroyed
     }
   }
 
