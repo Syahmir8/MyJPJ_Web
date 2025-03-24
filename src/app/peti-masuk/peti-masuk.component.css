@@ -1,0 +1,102 @@
+.inbox-container {
+    padding-top: 25px;
+    display: block;
+    margin: auto;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    padding-left: 50px;
+  }
+  
+  .tab {
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    width: 88px;
+    height: 28px;
+    background: #e0e0e0;
+    font-size: 13px;
+  }
+  
+  .tab.active {
+    background: #bdbbb9;
+    color: black;
+  }
+  
+  .message:first-child {
+    border-top: 1px solid #ddd;
+  }
+  
+  .messages {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .message {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    max-width: 115%;
+    background: white;
+    cursor: pointer;
+    background-color: white;
+    transition: background-color 0.3s;
+  }
+  
+  
+  .message.read {
+    background: #F1F1F1;
+  }
+  
+  .star-icon {
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .logo {
+    width: 30px;
+    height: 28px;
+    display: block;
+  }
+  
+  .message-content {
+    flex-grow: 1;
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .title {
+    font-weight: bold;
+    margin-top: 13px;
+    margin-bottom: 4px;  
+  }
+  
+  .description {
+    margin-top: 0; 
+  }
+  
+  .date {
+    color: black;
+    font-size: 13px;
+    margin-left: auto;
+  }
+  
+  .star-icon {
+    margin-left: 10px ;
+    color: #2B32B2;
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 8px;
+  }
+  
+  .star-icon:hover {
+    transform: scale(1.2);
+  }
