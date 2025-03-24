@@ -1,1 +1,54 @@
-<p>lesenkenderaan works!</p>
+<!DOCTYPE html>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="lesenkenderaan.component.css">
+
+    <title>Lesen Kenderaan</title>
+
+
+<div class="container">
+
+    <!-- Main Content -->
+      
+        <div class="tabs">
+            <div class="tab" (click)="switchTab(0)">Lesen Memandu</div>
+            <div class="tab active" (click)="switchTab(1)">Lesen Kenderaan Motor</div>
+            <div class="tab" (click)="switchTab(2)">Sijil Pemilikan Kenderaan</div>
+        </div>
+        <div class="content-box">
+          <div class="content-header">
+              <button class="reload-btn" (click)="reloadPage();">
+                <img src="assets/reload_icon.png" alt="Reload Icon" width="20">
+                  <span>Jana Semula</span>
+              </button>
+              <span class="generated-date">Dijana pada {{ generatedDate }}</span>
+          </div>
+
+          <h3>Lesen Kenderaan Bermotor</h3>
+          <select id="vehicleSelect" class="select-dropdown" [(ngModel)]="selectedVehicle"  (change)="toggleVehicleInfo()">
+              <option value="" disabled selected>--Sila Pilih Kenderaan--</option>
+              <option value="BMFXXXX">BMF XXXX</option>
+          </select>
+
+          <div id="noInfoMessage" class="no-data-box" *ngIf="!vehicleInfoVisible">
+              Tiada Maklumat Kenderaan
+          </div>
+
+          <div id="vehicleInfo" class="vehicle-info" *ngIf="vehicleInfoVisible">
+              <p class="info-box"id="platenumber">Nombor Pendaftaran Kenderaan: BMF XXXX</p>
+              <p class="info-box"id="tarikh">Tarikh Tamat Lesen: 29 Oktober 2023</p>
+              <p class="info-box" id="lokasi">Lokasi: Semenanjung</p>
+              <button class="status-button">BERKUATKUASA</button>
+              <div class="image-container">
+                  <img src="assets/qrcode.jpg" id="qrcode" alt="QR Code">
+                  <img src="assets/lesenkenderaan.jpg" id="lesen"alt="Vehicle Sticker">
+              </div>
+          </div>
+      </div>
+  </div>
+
+
+

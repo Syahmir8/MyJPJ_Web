@@ -1,0 +1,181 @@
+ /* General body style */
+ body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #F4F0F0;
+}
+
+
+/* Content */
+.main-container {
+ margin-left: 150px;
+ padding: 100px;
+ width: calc(100% - 260px);
+}
+
+
+/* Tabs */
+.tabs {
+    display: flex;
+    border: 2px solid black;
+    margin-left: 100px;
+    margin-top: 20px;
+    margin-right:0px;
+    
+    
+}
+.tab {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+    
+}
+.tab:hover {
+    background: #e0e0e0;
+}
+.tab.active {
+    background: #2D2DC4;
+    color: white;
+}
+
+
+/* Content Box */
+.content-box {
+width: 100%;
+max-width: 900px; /* Adjust to your design */
+margin: 50px auto; /* Center it */
+margin-right: 200px;
+margin-left: 210px;
+background: white;
+padding: 30px;
+border-radius: 10px;
+box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+/* Reload Button */
+.reload-btn {
+display: flex;
+align-items: center;
+background: #d9d9d9;
+color: black;
+padding: 8px 12px;
+border-radius: 6px;
+font-weight: bold;
+cursor: pointer;
+border: none;
+gap: 8px;
+justify-content: center;
+margin:0px 350px;
+}
+
+.reload-btn:hover {
+background: #c4c4c4;
+}
+
+/* Date Text */
+.generated-date {
+color: gray;
+font-size: 14px;
+margin-left: 345px;
+align-items: center;
+}
+
+/* Dropdown */
+.select-dropdown {
+width: 100%;
+padding: 8px;
+border: 1px solid #ccc;
+border-radius: 6px;
+margin-top: 10px;
+}
+
+/* No Data Box */
+.no-data-box {
+background: #d9d9f3;
+color: #333;
+padding: 15px;
+border-radius: 8px;
+text-align: center;
+font-weight: bold;
+margin-top: 20px;
+}
+
+/* Vehicle Info */
+.vehicle-info {
+margin-top: 20px;
+padding: 15px;
+background: white;
+border-radius: 8px;
+}
+
+.hidden {
+display: none;
+}
+
+/* Info Box */
+.info-box {
+background:  #d9d9f3;
+padding: 15px;
+border-radius: 6px;
+margin: 8px 0;
+
+}
+
+/* Status Button */
+.status-button {
+background: #28a745;
+color: white;
+padding: 10px 15px;
+border-radius: 6px;
+font-weight: bold;
+border: none;
+cursor: pointer;
+margin-top: 10px;
+}
+
+/* Image Container */
+.image-container {
+display: flex;
+justify-content: space-between;
+margin-top: 15px;
+
+}
+
+#lesen {
+width: 45%;
+border-radius: 8px;
+padding: 0px 80px;
+margin-top: -200px;
+margin-left: 220px;
+}
+#qrcode{
+width: 20vh;
+height: 20vh;
+border-radius: 8px;
+}
+#platenumber{
+background:  #d9d9f3;
+padding: 10px;
+border-radius: 10px;
+max-width: 350px;
+margin: 8px 0;
+
+}
+#tarikh{
+background:  #d9d9f3;
+padding: 10px;
+border-radius: 10px;
+max-width: 300px;
+margin: 8px 0;
+
+}
+#lokasi{
+background:  #d9d9f3;
+padding: 10px;
+border-radius: 10px;
+max-width: 300px;
+margin: 8px 0;
+
+}

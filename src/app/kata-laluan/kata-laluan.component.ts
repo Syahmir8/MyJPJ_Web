@@ -25,3 +25,4 @@ export class ChangePasswordComponent {
     this.showConfirmPassword = !this.showConfirmPassword;
   }
 }
+
