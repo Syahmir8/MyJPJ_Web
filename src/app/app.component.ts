@@ -10,7 +10,7 @@ import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterModule, SidebarComponent, FontAwesomeModule, TopnavComponent,PetiMasukComponent, FooterComponent],
+  imports: [RouterModule, SidebarComponent, FontAwesomeModule, TopnavComponent, PetiMasukComponent, FooterComponent, LoginComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
