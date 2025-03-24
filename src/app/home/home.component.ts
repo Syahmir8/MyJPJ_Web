@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {
   faSearch, faReceipt, faIdCard, faCar, faGavel,
@@ -13,7 +14,7 @@ import {
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, FontAwesomeModule],
+  imports: [RouterModule, CommonModule, FontAwesomeModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
