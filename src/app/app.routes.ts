@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { provideRouter } from '@angular/router';
 import { SemakanSamanComponent } from './semakan-saman/semakan-saman.component';
 import { PagetestComponent } from './pagetest/pagetest.component';
 import { DirektoriComponent } from './direktori/direktori.component';
@@ -13,8 +14,10 @@ import { ProfilComponent } from './profil/profil.component';
 import { SettingsComponent } from './settings/settings.component';
 
 export const routes: Routes = [
-    { path: '', component: HomeComponent },
-    { path: 'settings', component: SettingsComponent },
+    { path: '', 
+        component: HomeComponent },
+    { path: 'settings', 
+        component: SettingsComponent },
     {
         path: 'semakansaman',
         component: SemakanSamanComponent
@@ -56,3 +59,4 @@ export const routes: Routes = [
         component: ProfilComponent
     },
 ];
+

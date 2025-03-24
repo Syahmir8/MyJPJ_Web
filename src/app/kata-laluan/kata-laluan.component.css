@@ -158,10 +158,11 @@ html, body {
   
   /* Main Content */
   .content {
-    margin-left: 250px; /* Match sidebar width */
-    padding-top: 70px; /* Match top-bar height */
-    width: calc(100% - 200px);
+    margin-left: 30px; /* Match sidebar width */
+    padding-top: 10px; /* Match top-bar height */
+    width: calc(100% - 10px);
     height: 100vh;
+    padding-bottom: 100px;
     display: flex;
     flex-direction: column;
     min-height: 100vh; /* Allow content to expand */
