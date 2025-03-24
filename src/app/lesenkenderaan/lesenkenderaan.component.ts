@@ -41,7 +41,7 @@ export class LesenkenderaanComponent implements OnInit {
 
   switchTab(index: number) {
     if (index === 0) {
-      window.location.href = "lesen_memandu.html";
+      this.router.navigate(['/']);;
     } else if (index === 2) {
       this.router.navigate(['/pemilikan']);;
     }
