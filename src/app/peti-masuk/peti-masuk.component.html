@@ -1,1 +1,68 @@
-<p>peti-masuk works!</p>
+<div class="inbox-container">
+    <!-- Tabs -->
+    <div class="tabs">
+        <button class="tab active">All (6)</button>
+        <button class="tab" id="starred-tab">Starred (0)</button>
+      </div>
+    
+  
+    <div class="messages">
+      <div class="message" id="message-0" (click)="markAsRead(0)">
+        <span id="star-0" class="star-icon" (click)="toggleStar(0, $event)">☆</span>
+        <img src="assets/jpjlogo.png" class="logo" />
+        <div class="message-content">
+          <span class="title">Jabatan Pengangkutan Jalan</span>
+          <p id="description-0" class="description"><strong>Peluputan Lesen Memandu:</strong> Lesen memandu anda akan tamat tempoh tidak lama lagi.</p>      </div>
+        <span class="date">Mar 15</span>
+      </div>
+  
+      
+      <div class="message" id="message-1" (click)="markAsRead(1)">
+        <span id="star-1" class="star-icon" (click)="toggleStar(1, $event)">☆</span>
+        <img src="assets/jpjlogo.png" class="logo" />
+        <div class="message-content">
+          <span class="title">Jabatan Pengangkutan Jalan</span>
+          <p id="description-1" class="description"><strong>Peluputan Cukai Jalan:</strong> Cukai jalan anda akan tamat tempoh pada 26 Mac 2025. Perbaharui sekarang untuk mengelakkan penalti.</p>      </div>
+        <span class="date">Mar 11</span>
+     </div>
+  
+      <div class="message" id="message-2" (click)="markAsRead(2)">
+        <span id="star-2" class="star-icon" (click)="toggleStar(2, $event)">☆</span>
+        <img src="assets/jpjlogo.png" class="logo" />
+        <div class="message-content">
+          <span class="title">Jabatan Pengangkutan Jalan</span>
+          <p id="description-2" class="description"><strong>Kemaskini Ciri Baharu:</strong> Kini anda boleh membuat permohonan lesen CDL secara dalam talian.</p>      </div>
+        <span class="date">Feb 28 </span>
+        </div>
+  
+        <div class="message" id="message-3" (click)="markAsRead(3)">
+          <span id="star-3" class="star-icon" (click)="toggleStar(3, $event)">☆</span>
+          <img src="assets/jpjlogo.png" class="logo" />
+          <div class="message-content">
+            <span class="title">Jabatan Pengangkutan Jalan</span>
+            <p id="description-3" class="description"><strong>Sistem Penyelenggaraan:</strong> Sistem dijadualkan pada tarikh 28 Mac 2025. Beberapa perkhidmatan mungkin tidak tersedia.</p>        </div>
+          <span class="date">Feb 6</span>
+          </div>
+    </div>
+  
+    <div class="message" id="message-4" (click)="markAsRead(4)">
+      <span id="star-4" class="star-icon" (click)="toggleStar(4, $event)">☆</span>
+      <img src="assets/jpjlogo.png" class="logo" />
+      <div class="message-content">
+        <span class="title">Jabatan Pengangkutan Jalan</span>
+        <p id="description-4" class="description"><strong>Peluputan Lesen Memandu:</strong> Lesen memandu anda akan tamat tempoh tidak lama lagi.</p>    </div>
+      <span class="date">Jan 17</span>
+    </div>
+  
+    
+    <div class="message" id="message-5" (click)="markAsRead(5)">
+      <span id="star-5" class="star-icon" (click)="toggleStar(5, $event)">☆</span>
+      <img src="assets/jpjlogo.png" class="logo" />
+      <div class="message-content">
+        <span class="title">Jabatan Pengangkutan Jalan</span>
+        <p id="description-5" class="description"><strong>Kemaskini Ciri Baharu:</strong> Kini anda boleh menyemak kesahihan cukai jalan secara dalam talian.</p>    </div>
+      <span class="date">Jan 5</span>
+   </div>
+  
+  </div>
+  
