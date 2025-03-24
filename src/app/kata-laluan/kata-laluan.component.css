@@ -14,94 +14,6 @@ html, body {
     overflow: hidden; 
   }
   
-  /* Sidebar - keeping original width */
-  .sidebar {
-    background: #0D1B56;
-    color: white;
-    width: 200px; /* Original width as per your CSS */
-    height: 100vh;
-    padding: 15px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  /* User profile section - more compact */
-  .sidebar-header {
-    text-align: center;
-    margin-bottom: 10px;
-  }
-  
-  .profile-img {
-    margin-top: 50px;
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 5px;
-  }
-  
-  .user-info {
-    font-size: 0.8rem;
-  }
-  
-  .user-info h3 {
-    font-size: 0.9rem;
-    margin: 3px 0;
-  }
-  
-  .user-info p {
-    margin: 2px 0;
-    font-size: 0.75rem;
-  }
-  
-  /* Navigation Menu - more compact */
-  .menu ul, .menu2 ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .menu2 ul {
-    padding-left: 20px; /* Indent the submenu items */
-  }
-  
-  .menu li, .menu2 li {
-    padding: 5px 0;
-  }
-  
-  .menu2 li a {
-    font-size: 0.85rem; /* Adjust text size */
-  }
-  
-  .menu a, .menu2 a {
-    color: white;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    padding: 8px;
-    border-radius: 5px;
-    transition: 0.3s ease;
-    font-size: 0.85rem;
-  }
-  
-  .menu a i, .menu2 a i {
-    margin-right: 10px; /* Space between icon and text */
-    font-size: 1rem; /* Adjust icon size */
-  }
-  
-  .menu li a:hover, .menu2 li a:hover {
-    background: rgba(255, 255, 255, 0.2);
-  }
-  
-  .menu2 li.active a {
-    font-weight: bold;
-    background: rgba(255, 255, 255, 0.2);
-    border-left: 4px solid blue; /* Add left border (gold color) */
-    padding-left: 12px; /* Adjust padding for better alignment */
-  }
   
   /* Top Bar */
   .top-bar {
@@ -158,10 +70,11 @@ html, body {
   
   /* Main Content */
   .content {
-    margin-left: 250px; /* Match sidebar width */
-    padding-top: 70px; /* Match top-bar height */
-    width: calc(100% - 200px);
+    margin-left: 30px; /* Match sidebar width */
+    padding-top: 10px; /* Match top-bar height */
+    width: calc(100% - 10px);
     height: 100vh;
+    padding-bottom: 100px;
     display: flex;
     flex-direction: column;
     min-height: 100vh; /* Allow content to expand */

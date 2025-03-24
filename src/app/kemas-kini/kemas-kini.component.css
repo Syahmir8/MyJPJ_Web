@@ -1,0 +1,66 @@
+.container-kemaskini {
+    background-color: #fff;
+    margin: 50px 40px 20px 40px;
+    border-radius: 8px;
+    padding: 20px 0 20px 40px;
+    border: 1px solid rgb(231, 231, 231);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container-form {
+    background-color: #fff;
+    margin: 20px 40px 10px 40px;
+    border-radius: 8px;
+    border: 1px solid rgb(231, 231, 231);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.form {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Updated input-group styling for icon + input */
+.input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-group fa-icon {
+    position: absolute;
+    left: 10px;
+    color: #2B32B2;
+    font-size: 16px;
+}
+
+.input-group input {
+    background-color: #F7F5FF;
+    border-radius: 5px;
+    padding: 10px 10px 10px 35px;
+    margin-bottom: 0;
+    border: 1px solid rgb(231, 231, 231);
+    width: 100%;
+}
+
+/* Labels */
+.form label {
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+/* Divider */
+.form hr {
+    margin: 20px 0;
+    border-top: 1px solid rgb(231, 231, 231);
+}
+
+/* Text notice */
+.text {
+    text-align: center;
+}
