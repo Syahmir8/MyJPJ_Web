@@ -14,30 +14,30 @@
     <!-- Main Content -->
       
         <div class="tabs">
-            <div class="tab" onclick="switchTab(0)">Lesen Memandu</div>
-            <div class="tab active" onclick="switchTab(1)">Lesen Kenderaan Motor</div>
-            <div class="tab" onclick="switchTab(2)">Sijil Pemilikan Kenderaan</div>
+            <div class="tab" (click)="switchTab(0)">Lesen Memandu</div>
+            <div class="tab active" (click)="switchTab(1)">Lesen Kenderaan Motor</div>
+            <div class="tab" (click)="switchTab(2)">Sijil Pemilikan Kenderaan</div>
         </div>
         <div class="content-box">
           <div class="content-header">
-              <button class="reload-btn" onclick="location.reload();">
-                <button class="button">🔄 Jana Semula</button>
+              <button class="reload-btn" (click)="reloadPage();">
+                <img src="assets/reload_icon.png" alt="Reload Icon" width="20">
                   <span>Jana Semula</span>
               </button>
-              <span class="generated-date" id="generated-date"></span>
+              <span class="generated-date">Dijana pada {{ generatedDate }}</span>
           </div>
 
           <h3>Lesen Kenderaan Bermotor</h3>
-          <select id="vehicleSelect" class="select-dropdown" onchange="toggleVehicleInfo()">
+          <select id="vehicleSelect" class="select-dropdown" [(ngModel)]="selectedVehicle"  (change)="toggleVehicleInfo()">
               <option value="" disabled selected>--Sila Pilih Kenderaan--</option>
               <option value="BMFXXXX">BMF XXXX</option>
           </select>
 
-          <div id="noInfoMessage" class="no-data-box">
+          <div id="noInfoMessage" class="no-data-box" *ngIf="!vehicleInfoVisible">
               Tiada Maklumat Kenderaan
           </div>
 
-          <div id="vehicleInfo" class="hidden vehicle-info">
+          <div id="vehicleInfo" class="vehicle-info" *ngIf="vehicleInfoVisible">
               <p class="info-box"id="platenumber">Nombor Pendaftaran Kenderaan: BMF XXXX</p>
               <p class="info-box"id="tarikh">Tarikh Tamat Lesen: 29 Oktober 2023</p>
               <p class="info-box" id="lokasi">Lokasi: Semenanjung</p>
@@ -50,52 +50,5 @@
       </div>
   </div>
 
-<script>
-    function toggleVehicleInfo() {
-      
-            var select = document.getElementById("vehicleSelect");
-            var info = document.getElementById("vehicleInfo");
-            var noInfo = document.getElementById("noInfoMessage");
-
-            if (select.value) {
-                info.classList.remove("hidden");
-                noInfo.style.display = "none";
-            } else {
-                info.classList.add("hidden");
-                noInfo.style.display = "block";
-            }
-        }
-        function reloadPage() {
-          location.reload();
-        }
-        function formatDate(date) {
-        const months = [
-            "Januari", "Februari", "Mac", "April", "Mei", "Jun", 
-            "Julai", "Ogos", "September", "Oktober", "November", "Disember"
-        ];
-        const day = date.getDate().toString().padStart(2, '0');
-        const month = months[date.getMonth()];
-        const year = date.getFullYear();
-        return `${day} ${month} ${year}`;
-    }
-
-    // Set the current date when the page loads
-    document.getElementById("generated-date").textContent = "Dijana pada " + formatDate(new Date());
-    function switchTab(index) {
-    // Get all tabs
-    const tabs = document.querySelectorAll('.tab');
-    
-    // Remove 'active' from all tabs, add to the clicked one
-    tabs.forEach(tab => tab.classList.remove('active'));
-    tabs[index].classList.add('active');
-
-    // Optional: Redirect to other pages if needed
-    if (index === 0) {
-        window.location.href = "lesen_memandu.html";
-    } else if (index === 2) {
-        window.location.href = "sijil_pemilikan.html";
-    }
-}
-</script>
 
 
