@@ -1,35 +1,32 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>MyJPJWeb</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
- 
+
 </head>
+
 <body>
+  @if (isLoginPage()) {
+    <app-login></app-login>
+  } @else {
+    <div class="layout">
+      <app-sidebar class="sidebar"></app-sidebar>
 
-  <div class="layout">
-    
-    <!-- Sidebar -->
-    <app-sidebar class="sidebar"></app-sidebar>
-    
+      <div class="content-area">
+        <app-topnav class="topnav"></app-topnav>
 
-    <div class="content-area">
-      <!-- Top Navigation -->
-      <app-topnav class="topnav"></app-topnav>
-
-      
-
-      <!-- Main Content -->
-      <main class="main-content">
-        <router-outlet></router-outlet>
-        <app-footer></app-footer>
-      </main>
+        <main class="main-content">
+          <router-outlet></router-outlet>
+          <app-footer></app-footer>
+        </main>
+      </div>
     </div>
-
-  </div>
-
+  }
 </body>
+
 </html>

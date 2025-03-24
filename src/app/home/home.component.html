@@ -78,19 +78,19 @@
             <div class="tab-content-container">
               <div class="tab-content" [ngClass]="{'active': activeTabId === 'tab1'}" id="tab1">
                 <div class="services-grid">
-                  <a href="#" class="service-item">
+                  <a [routerLink]="['/semakansaman']" routerLinkActive="active" class="service-item">
                     <fa-icon [icon]="faSearch"></fa-icon>
                     <span>Semakan Saman</span>
                   </a>
-                  <a href="#" class="service-item">
+                  <a [routerLink]="['/#']" routerLinkActive="active" class="service-item">
                     <fa-icon [icon]="faCreditCard"></fa-icon>
                     <span>Bayaran Saman</span>
                   </a>
-                  <a href="#" class="service-item">
+                  <a [routerLink]="['/#']" routerLinkActive="active" class="service-item">
                     <fa-icon [icon]="faExclamationCircle"></fa-icon>
                     <span>Semakan Mata Demerit</span>
                   </a>
-                  <a href="#" class="service-item">
+                  <a [routerLink]="['/#']" routerLinkActive="active" class="service-item">
                     <fa-icon [icon]="faList"></fa-icon>
                     <span>Semakan Status Senarai Hitam</span>
                   </a>
