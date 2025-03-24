@@ -1,1 +1,134 @@
-<p>lesenkenderaan works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="lesenkenderaan.component.css">
+
+    <title>Lesen Kenderaan</title>
+</head>
+<body>
+<div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div>
+            <div class="profile">
+                <img src="assets/profile_icon.jpg" alt="Profile">
+                <h2>SYAFIQA ANEESA BINTI JOHARI</h2>
+                <p>Orang Awam, Malaysia</p>
+                <p>syafiqajohari&#64;gmail.com</p>
+            </div>
+        </div>
+        <div class="sidebar-menu">
+    <ul>
+        <li><i class="fa-solid fa-user"></i> Profil</li>
+        <li><i class="fa-solid fa-address-book"></i> Direktori</li>
+        <li><i class="fa-solid fa-envelope"></i> Peti Masuk</li>
+        <li><i class="fa-solid fa-gear"></i> Settings</li>
+    </ul>
+</div>
+
+        
+    </aside>
+
+    <!-- Main Content -->
+    <div class="header-container">
+        <!-- Header -->
+        <div class="header">
+            <img src="assets/jata_negara.png" alt="Logo 1">
+            <img src="assets/jpj_logo.png" alt="Logo 2">
+            <div class="header-text">
+                <h3>Portal Rasmi</h3>
+                <h2>Jabatan Pengangkutan Jalan Malaysia</h2>
+                <p>Official Portal of Road Transport Department Malaysia</p>
+            </div>
+        </div>
+        <div class="tabs">
+            <div class="tab" onclick="switchTab(0)">Lesen Memandu</div>
+            <div class="tab active" onclick="switchTab(1)">Lesen Kenderaan Motor</div>
+            <div class="tab" onclick="switchTab(2)">Sijil Pemilikan Kenderaan</div>
+        </div>
+        <div class="content-box">
+          <div class="content-header">
+              <button class="reload-btn" onclick="location.reload();">
+                  <img src="assets/reload_icon.png" alt="Reload Icon" width="20">
+                  <span>Jana Semula</span>
+              </button>
+              <span class="generated-date" id="generated-date"></span>
+          </div>
+
+          <h3>Lesen Kenderaan Bermotor</h3>
+          <select id="vehicleSelect" class="select-dropdown" onchange="toggleVehicleInfo()">
+              <option value="" disabled selected>--Sila Pilih Kenderaan--</option>
+              <option value="BMFXXXX">BMF XXXX</option>
+          </select>
+
+          <div id="noInfoMessage" class="no-data-box">
+              Tiada Maklumat Kenderaan
+          </div>
+
+          <div id="vehicleInfo" class="hidden vehicle-info">
+              <p class="info-box"id="platenumber">Nombor Pendaftaran Kenderaan: BMF XXXX</p>
+              <p class="info-box"id="tarikh">Tarikh Tamat Lesen: 29 Oktober 2023</p>
+              <p class="info-box" id="lokasi">Lokasi: Semenanjung</p>
+              <button class="status-button">BERKUATKUASA</button>
+              <div class="image-container">
+                  <img src="assets/qrcode.jpg" id="qrcode" alt="QR Code">
+                  <img src="assets/lesenkenderaan.jpg" id="lesen"alt="Vehicle Sticker">
+              </div>
+          </div>
+      </div>
+  </div>
+
+<script>
+    function toggleVehicleInfo() {
+      
+            var select = document.getElementById("vehicleSelect");
+            var info = document.getElementById("vehicleInfo");
+            var noInfo = document.getElementById("noInfoMessage");
+
+            if (select.value) {
+                info.classList.remove("hidden");
+                noInfo.style.display = "none";
+            } else {
+                info.classList.add("hidden");
+                noInfo.style.display = "block";
+            }
+        }
+        function reloadPage() {
+          location.reload();
+        }
+        function formatDate(date) {
+        const months = [
+            "Januari", "Februari", "Mac", "April", "Mei", "Jun", 
+            "Julai", "Ogos", "September", "Oktober", "November", "Disember"
+        ];
+        const day = date.getDate().toString().padStart(2, '0');
+        const month = months[date.getMonth()];
+        const year = date.getFullYear();
+        return `${day} ${month} ${year}`;
+    }
+
+    // Set the current date when the page loads
+    document.getElementById("generated-date").textContent = "Dijana pada " + formatDate(new Date());
+    function switchTab(index) {
+    // Get all tabs
+    const tabs = document.querySelectorAll('.tab');
+    
+    // Remove 'active' from all tabs, add to the clicked one
+    tabs.forEach(tab => tab.classList.remove('active'));
+    tabs[index].classList.add('active');
+
+    // Optional: Redirect to other pages if needed
+    if (index === 0) {
+        window.location.href = "lesen_memandu.html";
+    } else if (index === 2) {
+        window.location.href = "sijil_pemilikan.html";
+    }
+}
+</script>
+
+</body>
+</html>
+
