@@ -1,71 +1,81 @@
-
-<link rel="stylesheet" >
 <div class="layout">
-   
-    <main class="content">
-      <!-- Top Bar -->
-      <!--  <header class="top-bar">
-        <div class="logo">
-          <img src="assets/government.png" alt="Logo">
-          <img src="assets/jpj.png" alt="Logo">
-          <div class="header-text">
-            <p class="portal-name">Portal Rasmi</p>
-            <p class="dept-name">Jabatan Pengangkutan Jalan Malaysia</p>
-            <p class="dept-subtitle">Official Portal of Road Transport Department Malaysia</p>
-        </div>
-        </div>
-      </header>-->
-  
-      <!-- Password Change Section -->
-      
-        <div class="card">
+  <main class="content">
+      <div class="card">
           <h2>Tukar Kata Laluan</h2>
-        </div>
-  
-        <div class="container">
-        <div class="header">
-          <p class="instruction"><strong>Sila pastikan kata laluan anda mematuhi struktur berikut:</strong></p>
-          <ol>
-            <li>Panjang minimum 8 aksara</li>
-            <li>Panjang maksimum 12 aksara</li>
-            <li>Sekurang-kurangnya satu huruf besar</li>
-            <li>Sekurang-kurangnya satu huruf kecil</li>
-            <li>Sekurang-kurangnya satu nombor</li>
-            <li>Sekurang-kurangnya satu daripada aksara ini (! &#64; # $ ^ * &)</li>
-            <li>Tidak boleh menggunakan ID Pengguna / Nombor Pengenalan</li>
-          </ol>
-        </div>
-  
-        <!-- Password Input Fields -->
-        <div class="form-group">
-          <label>Kata Laluan</label>
-          <div class="input-container">
-            <span class="icon">🔒</span>
-            <input type="{{ showPassword ? 'text' : 'password' }}" placeholder="Kata Laluan">
-            <button class="eye-icon" (click)="togglePassword()">👁️</button>
-          </div>
-        </div>
-  
-        <div class="form-group">
-          <label>Kata Laluan Baharu</label>
-          <div class="input-container">
-            <span class="icon">🔒</span>
-            <input type="{{ showNewPassword ? 'text' : 'password' }}" placeholder="Kata Laluan Baharu">
-            <button class="eye-icon" (click)="toggleNewPassword()">👁️</button>
-          </div>
-        </div>
-  
-        <div class="form-group">
-          <label>Pengesahan Kata Laluan Baharu</label>
-          <div class="input-container">
-            <span class="icon">🔒</span>
-            <input type="{{ showConfirmPassword ? 'text' : 'password' }}" placeholder="Pengesahan Kata Laluan">
-            <button class="eye-icon" (click)="toggleConfirmPassword()">👁️</button>
-          </div>
-        </div>
-  
-        <button class="submit-btn">Hantar</button>
       </div>
-    </main>
-  </div>
-  
+
+      <div class="container">
+          <div class="header">
+              <p class="instruction"><strong>Sila pastikan kata laluan anda mematuhi struktur berikut:</strong></p>
+              <ol>
+                  <li>Panjang minimum 8 aksara</li>
+                  <li>Panjang maksimum 12 aksara</li>
+                  <li>Sekurang-kurangnya satu huruf besar</li>
+                  <li>Sekurang-kurangnya satu huruf kecil</li>
+                  <li>Sekurang-kurangnya satu nombor</li>
+                  <li>Sekurang-kurangnya satu daripada aksara ini (! &#64; # $ ^ * &)</li>
+                  <li>Tidak boleh menggunakan ID Pengguna / Nombor Pengenalan</li>
+              </ol>
+          </div>
+
+          <!-- ✅ Mesej Berjaya / Ralat di Atas -->
+          <p class="message success" *ngIf="successMessage">{{ successMessage }}</p>
+          <p class="message error" *ngIf="submitted && passwordForm.invalid">❌ Sila betulkan ralat dalam borang!</p>
+
+          <form [formGroup]="passwordForm" (ngSubmit)="onSubmit()">
+              <!-- Kata Laluan Lama -->
+              <div class="form-group">
+                  <label>Kata Laluan Lama</label>
+                  <div class="input-container">
+                      <span class="icon">🔒</span>
+                      <input [type]="showPassword ? 'text' : 'password'" formControlName="oldPassword" placeholder="Kata Laluan">
+                      <button type="button" class="eye-icon" (click)="togglePassword()">👁️</button>
+                  </div>
+                  <p class="error" *ngIf="submitted && passwordForm.get('oldPassword')?.hasError('required')">
+                      Ruangan ini wajib diisi
+                  </p>
+              </div>
+
+              <!-- Kata Laluan Baharu -->
+              <div class="form-group">
+                  <label>Kata Laluan Baharu</label>
+                  <div class="input-container">
+                      <span class="icon">🔒</span>
+                      <input [type]="showNewPassword ? 'text' : 'password'" formControlName="newPassword" placeholder="Kata Laluan Baharu">
+                      <button type="button" class="eye-icon" (click)="toggleNewPassword()">👁️</button>
+                  </div>
+                  <p class="error" *ngIf="submitted && passwordForm.get('newPassword')?.hasError('required')">
+                      Ruangan ini wajib diisi
+                  </p>
+                  <p class="error" *ngIf="submitted && passwordForm.get('newPassword')?.hasError('minlength')">
+                      Kata laluan mesti sekurang-kurangnya 8 aksara
+                  </p>
+                  <p class="error" *ngIf="submitted && passwordForm.get('newPassword')?.hasError('maxlength')">
+                      Kata laluan tidak boleh melebihi 12 aksara
+                  </p>
+                  <p class="error" *ngIf="submitted && passwordForm.get('newPassword')?.hasError('pattern')">
+                      Kata laluan mesti ada huruf besar, huruf kecil, nombor & aksara khas (! &#64; # $ ^ * &)
+                  </p>
+              </div>
+
+              <!-- Pengesahan Kata Laluan Baharu -->
+              <div class="form-group">
+                  <label>Pengesahan Kata Laluan Baharu</label>
+                  <div class="input-container">
+                      <span class="icon">🔒</span>
+                      <input [type]="showConfirmPassword ? 'text' : 'password'" formControlName="confirmPassword">
+                      <button type="button" (click)="toggleConfirmPassword()">👁️</button>
+                  </div>
+                  <p class="error" *ngIf="submitted && passwordForm.get('confirmPassword')?.hasError('required')">
+                      Ruangan ini wajib diisi
+                  </p>
+                  <p class="error" *ngIf="submitted && passwordForm.hasError('passwordMismatch')">
+                      Kata laluan tidak sama
+                  </p>
+              </div>
+
+              <button type="submit" class="submit-btn">Hantar</button>
+          </form>
+      </div>
+  </main>
+</div>
