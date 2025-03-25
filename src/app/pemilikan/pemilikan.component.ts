@@ -7,11 +7,12 @@ import { Component } from '@angular/core';
   templateUrl: './pemilikan.component.html',
   styleUrl: './pemilikan.component.css'
 })
+
 export class PemilikanComponent {
   vehicleInfo: any = null;
   lastUpdated: string = "Dijana pada 12-03-2025";
 
-  constructor() {} // Removed HttpClient
+  constructor() {}
 
   getCurrentDateTime(): string {
     const now = new Date();
