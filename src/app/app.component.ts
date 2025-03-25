@@ -1,16 +1,18 @@
 import { Component } from '@angular/core';
-import { RouterModule, Router, NavigationEnd } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { SidebarComponent } from "./sidebar/sidebar.component";
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { TopnavComponent } from "./topnav/topnav.component";
 import { FooterComponent } from './footer/footer.component';
-import { PetiMasukComponent } from "./peti-masuk/peti-masuk.component";
+import { DetailNegeriComponent } from "./detail-negeri/detail-negeri.component";
 import { LoginComponent } from "./login/login.component";
-import { filter } from 'rxjs/operators';
+import { Router } from '@angular/router';
+import { NavigationEnd } from '@angular/router';
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterModule, SidebarComponent, FontAwesomeModule, TopnavComponent, PetiMasukComponent, FooterComponent, LoginComponent],
+  imports: [RouterModule, SidebarComponent, FontAwesomeModule, TopnavComponent, FooterComponent, DetailNegeriComponent, LoginComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
