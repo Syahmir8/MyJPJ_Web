@@ -63,8 +63,8 @@
                   <label>Pengesahan Kata Laluan Baharu</label>
                   <div class="input-container">
                       <span class="icon">🔒</span>
-                      <input [type]="showConfirmPassword ? 'text' : 'password'" formControlName="confirmPassword">
-                      <button type="button" (click)="toggleConfirmPassword()">👁️</button>
+                      <input [type]="showConfirmPassword ? 'text' : 'password'" formControlName="confirmPassword" placeholder="Kata Laluan Baharu">
+                      <button type="button" class="eye-icon" (click)="toggleConfirmPassword()">👁️</button>
                   </div>
                   <p class="error" *ngIf="submitted && passwordForm.get('confirmPassword')?.hasError('required')">
                       Ruangan ini wajib diisi
