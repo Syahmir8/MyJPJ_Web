@@ -11,18 +11,15 @@ import { PemilikanComponent } from './pemilikan/pemilikan.component';
 import { PetiMasukComponent } from './peti-masuk/peti-masuk.component';
 import { ProfilComponent } from './profil/profil.component';
 import { SettingsComponent } from './settings/settings.component';
-<<<<<<< Updated upstream
 import { LoginComponent } from './login/login.component';
-=======
 import { DetailNegeriComponent } from './detail-negeri/detail-negeri.component';
->>>>>>> Stashed changes
+
 
 export const routes: Routes = [
     { path: '', redirectTo: '/login', pathMatch: 'full' }, // Default route
     { path: 'login', component: LoginComponent },
     { path: 'home', component: HomeComponent },
     { path: 'settings', component: SettingsComponent },
-<<<<<<< Updated upstream
     { path: 'semakansaman', component: SemakanSamanComponent },
     { path: 'acap', component: PagetestComponent },
     { path: 'direktori', component: DirektoriComponent },
@@ -33,53 +30,5 @@ export const routes: Routes = [
     { path: 'pemilikan', component: PemilikanComponent },
     { path: 'peti-masuk', component: PetiMasukComponent },
     { path: 'profil', component: ProfilComponent },
+    { path: 'detail-negeri', component: DetailNegeriComponent },
 ];
-=======
-    {
-        path: 'semakansaman',
-        component: SemakanSamanComponent
-    },
-    {
-        path: 'acap',
-        component: PagetestComponent
-    },
-    {
-        path: 'direktori',
-        component: DirektoriComponent
-    },
-    {
-        path: 'katalaluan',
-        component: ChangePasswordComponent
-    },
-    {
-        path: 'kemaskini',
-        component: KemasKiniComponent
-    },
-    {
-        path: 'lesenkenderaan',
-        component: LesenkenderaanComponent
-    },
-    {
-        path: 'pembaharuanlesen',
-        component: PembaharuanLesenComponent
-    },
-    {
-        path: 'pemilikan',
-        component: PemilikanComponent
-    },
-    {
-        path: 'peti-masuk',
-        component: PetiMasukComponent
-    },
-    {
-        path: 'profil',
-        component: ProfilComponent
-    },
-    {
-        path: 'detail-negeri',
-        component: DetailNegeriComponent
-    },
-
-    
-];
->>>>>>> Stashed changes
