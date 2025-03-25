@@ -56,7 +56,7 @@ export class LesenkenderaanComponent implements OnInit {
 
   switchTab(index: number) {
     if (index === 0) {
-      this.router.navigate(['/']);;
+      this.router.navigate(['/lesenMemandu']);;
     } else if (index === 2) {
       this.router.navigate(['/pemilikan']);;
     }
