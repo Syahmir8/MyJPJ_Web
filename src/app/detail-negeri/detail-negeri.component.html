@@ -1,0 +1,38 @@
+<main>
+    <div class="content">
+        <!-- Flag & Title -->
+        <div class="flag">
+            <img src="assets/johor.jpg" alt="Johor Flag">
+        </div>
+        <h2>Johor</h2>
+
+        <!-- Dropdown -->
+        <div class="dropdown-lokasi">
+            <label for="lokasi">Lokasi</label>
+            <select id="lokasi" onchange="showDetails(this.value)">
+                <option value="" disabled selected>Pilih Lokasi</option>
+                <option value="jpj">JPJ Negeri Johor</option>
+                <option value="mersing">Mersing</option>
+                <option value="batu-pahat">Batu Pahat</option>
+                <option value="pontian">Pontian</option>
+                <option value="muar">Muar</option>
+                <option value="kluang">Kluang</option>
+                <option value="utc-johor">Pejabat UTC Negeri Johor</option>
+                <option value="utc-pasir-gudang">Pejabat UTC Pasir Gudang</option>
+            </select>
+        </div>
+
+        <!-- Information Section -->
+        <section id="info-card" class="info-card hidden">
+            <h3 class="title">JPJ Negeri Johor</h3>
+            <div class="info-details">
+                <p><strong>No. Telefon:</strong> 07-3606060</p>
+                <p><strong>No. Fax:</strong> 07-3606186</p>
+                <p><strong>Waktu Operasi:</strong> 7.45 pagi - 4.30 petang</p>
+                <p><strong>Koordinat:</strong> 1.538114, 103.768227</p>
+                <p><strong>Alamat:</strong> Kompleks JPJ, Taman Daya, 80990, Johor Bahru</p>
+            </div>
+        </section>
+        
+    </div>
+</main>
