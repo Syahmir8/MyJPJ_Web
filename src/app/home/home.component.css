@@ -114,7 +114,7 @@ body {
   text-align: center;
   width: 100%;
   border-bottom: 2px solid #ff4d4f; /* The desired color */
-  padding-bottom: 10px;
+  padding-bottom: 10px; 
 }
 
 .user-profile {
@@ -175,6 +175,28 @@ body {
 
 .user-meta i {
   margin-right: 8px;
+  font-size: 1rem;
+}
+
+.user-nav{
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Slightly reduced gap */
+  margin-top:  30%; /* Slightly reduced margin */
+  align-items: center;
+  width: 100%;
+}
+.user-nav span,
+.user-nav a {
+  font-size: 0.95rem; /* Slightly smaller meta text */
+  color: #0a2463; /* Muted grey for meta */
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.user-nav i {
+  margin-right: 10px;
   font-size: 1rem;
 }
 

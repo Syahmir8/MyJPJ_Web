@@ -13,7 +13,6 @@ import { ProfilComponent } from './profil/profil.component';
 import { SettingsComponent } from './settings/settings.component';
 import { LoginComponent } from './login/login.component';
 import { DetailNegeriComponent } from './detail-negeri/detail-negeri.component';
-import { LesenMemanduComponent } from './lesen-memandu/lesen-memandu.component';
 
 
 export const routes: Routes = [
@@ -31,6 +30,6 @@ export const routes: Routes = [
     { path: 'pemilikan', component: PemilikanComponent },
     { path: 'peti-masuk', component: PetiMasukComponent },
     { path: 'profil', component: ProfilComponent },
-    { path: 'detail-negeri', component: DetailNegeriComponent },
-    { path: 'lesenMemandu', component: LesenMemanduComponent },
+    { path: 'detail-negeri',component: DetailNegeriComponent },
 ];
+    
