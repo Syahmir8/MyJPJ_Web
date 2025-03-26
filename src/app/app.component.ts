@@ -12,7 +12,7 @@ import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterModule, RouterModule, SidebarComponent, TopnavComponent, FooterComponent, DetailNegeriComponent, LoginComponent],
+  imports: [RouterModule, RouterModule, TopnavComponent, FooterComponent, LoginComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
