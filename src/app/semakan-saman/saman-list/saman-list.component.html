@@ -1,0 +1,23 @@
+<h2>SEMAKAN SAMAN</h2>
+<br><br>
+<div class="saman-container">
+  
+    <div *ngFor="let summon of sigma">
+      <app-saman-card 
+        [plate]="summon.plate"
+        [summonId]="summon.summonId"
+        [date]="summon.date">
+      </app-saman-card>
+      <br><br><br>
+    </div>
+  </div>
+  
+
+<div class="law-section">
+    <h3>Akta saman kenderaan di Malaysia</h3>
+    <ul>
+      <li>Akta Pengangkutan Jalan 1987 (Akta 333) Undang-undang utama berkaitan pengangkutan jalan.</li>
+      <li>Kaedah-Kaedah Lalu Lintas Jalan 1959 Peraturan berkaitan kelakuan pengguna jalan raya.</li>
+      <li>Kaedah-Kaedah Pengangkutan Jalan (Kesalahan-Kesalahan Yang Boleh Dikompaun) 2003.</li>
+    </ul>
+  </div>

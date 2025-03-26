@@ -1,0 +1,38 @@
+.summon-card {
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.summon-card:hover {
+  transform: scale(1.10);
+}
+
+.error-text {
+  color: rgb(255, 80, 80);
+  font-weight: bold;
+}
+  
+.pay-button {
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px; 
+  cursor: pointer;
+  transition: 0.3s;
+  }
+  p {
+    color: #1e0f0f;
+    margin: 5px 0;
+  }
+  .pay-button:hover {
+    background: linear-gradient(135deg, #ff4b2b, #ff416c);
+  }
