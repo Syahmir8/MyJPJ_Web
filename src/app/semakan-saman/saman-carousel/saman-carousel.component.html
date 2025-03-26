@@ -1,0 +1,25 @@
+<div class="carousel-container">
+    <h1>Semakam Saman</h1>
+    <p>Check Your Traffic Violations</p>
+  
+    <ngx-slick-carousel #slickModal="slick-carousel" [config]="slideConfig">
+      <div ngxSlickItem *ngFor="let saman of samanList" class="saman-card">
+        <div class="saman-content">
+          <span class="warning-icon">⚠️</span>
+          <h2>{{ saman.plateNumber }}</h2>
+          <div class="details">
+            <div class="left">
+              <p><span>Date</span><br />{{ saman.date }}</p>
+              <p><span>Location</span><br /><strong>{{ saman.location }}</strong></p>
+            </div>
+            <div class="right">
+              <p><span>Time</span><br />{{ saman.time }}</p>
+              <p><span>Violation</span><br /><strong>{{ saman.offense }}</strong></p>
+            </div>
+          </div>
+          <button class="pay-btn">Belum Bayar</button>
+        </div>
+      </div>
+    </ngx-slick-carousel>
+  </div>
+  
