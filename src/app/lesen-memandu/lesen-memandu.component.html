@@ -1,0 +1,15 @@
+<div class="license-container">
+    <h2>Lesen Memandu</h2>
+    <label for="licenseType">Lesen Kompeten</label>
+    <div class="license-details">
+      <p><strong>Nama:</strong> {{ licenseInfo.name }}</p>
+      <p><strong>Tarikh Tamat Lesen:</strong> {{ licenseInfo.expiryDate }}</p>
+      <p><strong>Lokasi:</strong> {{ licenseInfo.location }}</p>
+      <button class="status-button">{{ licenseInfo.status }}</button>
+    </div>
+    <img [src]="licenseInfo.qrCode" alt="QR Code" class="qr-code" />
+    <button class="renew-button" (click)="renewLicense()">Jana Semula</button>
+    <p class="renew-date">Dijana pada 12-03-2025</p>
+    <img [src]="licenseInfo.licenseImage" alt="Driving License" class="license-image" />
+  </div>
+  
