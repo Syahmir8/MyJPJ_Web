@@ -1,6 +1,6 @@
 <div class="carousel-container">
     <h1>Semakam Saman</h1>
-    <p>Check Your Traffic Violations</p>
+    <p>Lain kali pandu dengan berhemah</p>
   
     <ngx-slick-carousel #slickModal="slick-carousel" [config]="slideConfig">
       <div ngxSlickItem *ngFor="let saman of samanList" class="saman-card">
@@ -9,12 +9,12 @@
           <h2>{{ saman.plateNumber }}</h2>
           <div class="details">
             <div class="left">
-              <p><span>Date</span><br />{{ saman.date }}</p>
-              <p><span>Location</span><br /><strong>{{ saman.location }}</strong></p>
+              <p><span>Tarikh</span><br />{{ saman.date }}</p>
+              <p><span>Lokasi</span><br />{{ saman.location }}</p>
             </div>
             <div class="right">
-              <p><span>Time</span><br />{{ saman.time }}</p>
-              <p><span>Violation</span><br /><strong>{{ saman.offense }}</strong></p>
+              <p><span>Masa</span><br />{{ saman.time }}</p>
+              <p><span>Kesalahan</span><br />{{ saman.offense }}</p>
             </div>
           </div>
           <button class="pay-btn">Belum Bayar</button>
