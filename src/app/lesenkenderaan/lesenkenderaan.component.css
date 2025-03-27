@@ -81,12 +81,7 @@ font-size: 14px;
 margin-left: 500px;
 align-items: center;
 }
-.last-reload{
-    color: gray;
-    font-size: 14px;
-    margin-left: 0px;
-    align-items: center;
-    }
+
 
 /* Dropdown */
 .select-dropdown {
