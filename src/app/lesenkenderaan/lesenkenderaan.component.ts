@@ -32,10 +32,13 @@ export class LesenkenderaanComponent implements OnInit {
     this.vehicleInfoVisible = !!this.selectedVehicle;  // Show if selectedVehicle has a value
   }
 
-  reloadPage(): void {
-    this.updateLastReload(); // ✅ Updates last reload time
-  }
+      reloadPage(): void {
+        this.updateLastReload(); // Update the last reload date
+        setTimeout(() => {
+          window.location.reload(); // Reload the entire page
+        }, 100); // Delay to ensure the date updates before reload
 
+      }
   formatDate(date: Date): string {
     const day = date.getDate().toString().padStart(2, '0');
     const month = (date.getMonth() + 1).toString().padStart(2, '0'); // Month is zero-based
