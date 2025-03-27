@@ -75,16 +75,18 @@ background: #c4c4c4;
 }
 
 /* Date Text */
-.generated-date-container{
+.generated-date{
 color: gray;
-text-align: center; /* Center the text */
-display: block; /* Ensure it behaves like a block element */
-width: 100%; /* Make it take full width */
-margin-top: 10px; 
-margin-right:800px;
+font-size: 14px;
+margin-left: 280px;
 align-items: center;
 }
-
+.last-reload{
+    color: gray;
+    font-size: 14px;
+    margin-left: 0px;
+    align-items: center;
+    }
 
 /* Dropdown */
 .select-dropdown {

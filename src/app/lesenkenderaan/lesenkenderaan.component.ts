@@ -23,27 +23,35 @@ export class LesenkenderaanComponent implements OnInit {
   }
   updateLastReload(): void {
     const now = new Date();
-    this.lastReload = this.formatDate(now);
+    this.lastReload = now.toLocaleString('ms-MY', {
+      weekday: 'long',
+      day: '2-digit',
+      month: 'long',
+      year: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+      hour12: false
+    });
   }
-  
-  
 
   toggleVehicleInfo() {
     this.vehicleInfoVisible = !!this.selectedVehicle;  // Show if selectedVehicle has a value
   }
 
-      reloadPage(): void {
-        this.updateLastReload(); // Update the last reload date
-        setTimeout(() => {
-          window.location.reload(); // Reload the entire page
-        }, 100); // Delay to ensure the date updates before reload
+  reloadPage(): void {
+    this.updateLastReload(); // ✅ Updates last reload time
+  }
 
-      }
   formatDate(date: Date): string {
+    const months = [
+      "Januari", "Februari", "Mac", "April", "Mei", "Jun",
+      "Julai", "Ogos", "September", "Oktober", "November", "Disember"
+    ];
     const day = date.getDate().toString().padStart(2, '0');
-    const month = (date.getMonth() + 1).toString().padStart(2, '0'); // Month is zero-based
+    const month = months[date.getMonth()];
     const year = date.getFullYear();
-    return `${day}-${month}-${year}`; // Format: DD-MM-YYYY
+    return `${day} ${month} ${year}`;
   }
 
   switchTab(index: number) {
