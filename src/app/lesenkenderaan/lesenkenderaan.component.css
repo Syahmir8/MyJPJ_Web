@@ -75,7 +75,7 @@ background: #c4c4c4;
 }
 
 /* Date Text */
-.generated-date{
+.generated-date-container{
 color: gray;
 text-align: center; /* Center the text */
 display: block; /* Ensure it behaves like a block element */
