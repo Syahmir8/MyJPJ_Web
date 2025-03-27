@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+.carousel-container {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  color: rgb(13, 13, 13);
+  font-family: 'Poppins', sans-serif;
+
+  h1 {
+    font-size: 28px;
+    font-weight: 600;
+  }
+
+  p {
+    font-size: 20px;
+    opacity: 0.8;
+  }
+}
+
+
+.saman-card {
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10000px);
+  border-radius: 20px;
+  padding: 25px;
+  width: 400px;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease-in-out;
+  margin: 20px auto;
+}
+
+.saman-content {
+  text-align: center;
+}
+
+.warning-icon {
+  font-size: 40px;
+  color: yellow;
+}
+
+h2 {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  font-size: 14px;
+  opacity: 0.9;
+
+  span {
+    font-weight: 600;
+    color: #000000;
+  }
+
+
+}
+
+.pay-btn {
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 14px;
+}
+
+.pay-btn:hover {
+  background: linear-gradient(135deg, #ff4b2b, #ff416c);
+}
+
+ngx-slick-carousel {
+  position: relative;
+}
+
+ngx-slick-carousel::ng-deep .slick-prev,
+ngx-slick-carousel::ng-deep .slick-next {
+  background: rgba(0, 0, 0, 0.474);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
