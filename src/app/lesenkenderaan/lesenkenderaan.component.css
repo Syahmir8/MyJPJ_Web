@@ -75,10 +75,12 @@ background: #c4c4c4;
 }
 
 /* Date Text */
-#generated-date{
+.generated-date{
 color: gray;
-font-size: 14px;
-margin-left:px;
+text-align: center; /* Center the text */
+display: block; /* Ensure it behaves like a block element */
+width: 100%; /* Make it take full width */
+margin-top: 10px; 
 align-items: center;
 }
 
