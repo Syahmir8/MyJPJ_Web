@@ -81,6 +81,7 @@ text-align: center; /* Center the text */
 display: block; /* Ensure it behaves like a block element */
 width: 100%; /* Make it take full width */
 margin-top: 10px; 
+margin-right:800px;
 align-items: center;
 }
 
