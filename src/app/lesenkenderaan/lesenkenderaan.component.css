@@ -78,13 +78,13 @@ background: #c4c4c4;
 .generated-date{
 color: gray;
 font-size: 14px;
-margin-left: 280px;
+margin-left: 200px;
 align-items: center;
 }
 .last-reload{
     color: gray;
     font-size: 14px;
-    margin-left: 0px;
+    margin-left: 800px;
     align-items: center;
     }
 
