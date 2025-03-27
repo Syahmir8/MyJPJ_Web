@@ -23,17 +23,10 @@ export class LesenkenderaanComponent implements OnInit {
   }
   updateLastReload(): void {
     const now = new Date();
-    this.lastReload = now.toLocaleString('ms-MY', {
-      weekday: 'long',
-      day: '2-digit',
-      month: 'long',
-      year: 'numeric',
-      hour: '2-digit',
-      minute: '2-digit',
-      second: '2-digit',
-      hour12: false
-    });
+    this.lastReload = this.formatDate(now);
   }
+  
+  
 
   toggleVehicleInfo() {
     this.vehicleInfoVisible = !!this.selectedVehicle;  // Show if selectedVehicle has a value
@@ -44,14 +37,10 @@ export class LesenkenderaanComponent implements OnInit {
   }
 
   formatDate(date: Date): string {
-    const months = [
-      "Januari", "Februari", "Mac", "April", "Mei", "Jun",
-      "Julai", "Ogos", "September", "Oktober", "November", "Disember"
-    ];
     const day = date.getDate().toString().padStart(2, '0');
-    const month = months[date.getMonth()];
+    const month = (date.getMonth() + 1).toString().padStart(2, '0'); // Month is zero-based
     const year = date.getFullYear();
-    return `${day} ${month} ${year}`;
+    return `${day}-${month}-${year}`; // Format: DD-MM-YYYY
   }
 
   switchTab(index: number) {
