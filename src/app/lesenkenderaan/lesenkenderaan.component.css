@@ -75,10 +75,10 @@ background: #c4c4c4;
 }
 
 /* Date Text */
-.generated-date{
+#generated-date{
 color: gray;
 font-size: 14px;
-margin-left:280px;
+margin-left:px;
 align-items: center;
 }
 
