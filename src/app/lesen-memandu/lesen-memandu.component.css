@@ -1,0 +1,41 @@
+.license-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    height: 100vh;
+  }
+  
+  .license-details p {
+    background-color: #e0e0e0;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  
+  .status-button {
+    background-color: green;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .renew-button {
+    background-color: gray;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  .qr-code {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .license-image {
+    width: 300px;
+    display: block;
+    margin-top: 10px;
+  }
+  

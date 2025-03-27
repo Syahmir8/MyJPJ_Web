@@ -1,239 +1,369 @@
 <!-- app.component.html -->
 <div class="app-container">
-    <!-- Main Content -->
-    <main class="main-content">
-      <!-- Hero Section -->
-      <section class="hero-section">
-        <div class="hero-content">
-          <h1>Jabatan Pengangkutan Jalan Malaysia</h1>
-          <p>Your one-stop portal for all road transport services</p>
-          <div class="search-container">
-            <input type="text" placeholder="Search for services..." class="search-input">
-            <button class="search-btn"><fa-icon [icon]="faSearch"></fa-icon></button>
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-content">
+        <div class="search-container">
+          <input type="text" placeholder="Search for services..." class="search-input">
+          <button class="search-btn"><fa-icon [icon]="faSearch"></fa-icon></button>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Content -->
+    <div class="content">
+      <section class="overview-section">
+        <div class="user-info-card">
+          <div class="title">Maklumat Pengguna</div>
+          <div class="user-profile">
+            <div class="user-avatar">
+              <img src="assets/profile.png" alt="User Profile">
+            </div>
+            <div class="user-info-details">
+              <h3 class="user-name">SYAFIQA ANEESA BINTI JOHARI</h3>
+              <div class="user-meta">
+                <span class="user-type"><i class="fas fa-user-circle"></i> Orang Awam Malaysia</span>
+                <a href="mailto:syafiqajohari@gmail.com" class="user-email"><i class="fas fa-envelope"></i>
+                  syafiqajohari&#64;gmail.com</a>
+                <span class="user-status"><i class="fas fa-certificate"></i> STANDARD</span>
+              </div>
+              <div class="user-nav">
+                <span> <a [routerLink]="['/profil']" routerLinkActive="active"> <i class="fas fa-user"></i> Profil</a>
+                </span>
+                <span> <a [routerLink]="['/peti-masuk']" routerLinkActive="active"> <i class="fas fa-message"></i> Peti
+                    Masuk</a> </span>
+                <span> <a [routerLink]="['/kemaskini']" routerLinkActive="active"> <i class="fas fa-history"></i> Log
+                    Kemaskini</a></span>
+                <span> <a [routerLink]="['/direktori']" routerLinkActive="active"> <i class="fas fa-map"></i>
+                    Direktori</a></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="overview-grid">
+          <div class="other-card">
+            <div class="card-header">
+              <h3>Saman</h3>
+              <i class="fas fa-exclamation-triangle warning-icon" style="display: none;"></i>
+            </div>
+            <div class="info-card">
+              <p class="no-record">Tiada rekod saman tertunggak ditemui.</p>
+              <p class="last-checked"><small>Terakhir disemak: 26 Mac 2025</small></p>
+            </div>
+          </div>
+
+          <div class="other-card">
+            <div class="card-header">
+              <h3>Lesen Memandu</h3>
+            </div>
+            <div class="info-card">
+              <div class="info-item">
+                <span class="info-label">Jenis Lesen:</span>
+                <span class="info-value">B2, D</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Tarikh Luput:</span>
+                <span class="info-value">15 Januari 2026</span>
+              </div>
+              <p class="last-checked"><small>Terakhir disemak: 26 Mac 2025</small></p>
+            </div>
+          </div>
+
+          <div class="other-card">
+            <div class="card-header">
+              <h3>Cukai Jalan (Roadtax)</h3>
+              <div style="position: relative; display: inline-block;">
+                <i class="fas fa-bell"></i>
+                <span
+                  style="position: absolute; top: -5px; right: -5px; width: 10px; height: 10px; background-color: red; border-radius: 50%;"></span>
+              </div>
+            </div>
+            <div class="info-card">
+              <div class="info-item">
+                <span class="info-label">Kenderaan 1:</span>
+                <span class="info-value">ABC 1234</span>
+              </div>
+              <div class="info-item indented">
+                <span class="info-label">Luput:</span>
+                <span class="info-value">30 Jun 2025</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Kenderaan 2:</span>
+                <span class="info-value">XYZ 5678</span>
+              </div>
+              <div class="info-item indented">
+                <span class="info-label">Luput:</span>
+                <span class="info-value">10 November 2025</span>
+              </div>
+              <p class="last-checked"><small>Terakhir disemak: 26 Mac 2025</small></p>
+            </div>
+          </div>
+
+          <div class="other-card">
+            <div class="card-header">
+              <h3>Mata Demerit</h3>
+            </div>
+            <div class="info-card">
+              <div class="info-item">
+                <span class="info-label">Terkumpul:</span>
+                <span class="info-value">0 mata</span>
+              </div>
+              <p>Tiada rekod penggantungan lesen.</p>
+              <p class="last-checked"><small>Terakhir disemak: 26 Mac 2025</small></p>
+            </div>
+          </div>
+
+          <div class="other-card">
+            <div class="card-header">
+              <h3>Status Senarai Hitam</h3>
+              <div style="position: relative; display: inline-block;">
+                <i class="fas fa-bell"></i>
+                <span
+                  style="position: absolute; top: -5px; right: -5px; width: 10px; height: 10px; background-color: red; border-radius: 50%;"></span>
+              </div>
+            </div>
+            <div class="info-card">
+              <div class="info-item">
+                <span class="info-label">Kenderaan:</span>
+                <span class="info-value">JXD 4322</span>
+              </div>
+              <div class="info-item indented">
+                <span class="info-label">Status:</span>
+                <span class="info-value" style="color: #ff0000; font-weight: 500;">Senarai Hitam</span>
+              </div>
+              <div class="info-item indented">
+                <span class="info-label">Sebab:</span>
+                <span class="info-value">Kegagalan membayar ansuran pinjaman kenderaan.</span>
+              </div>
+              <p class="last-checked"><small>Terakhir disemak: 26 Mac 2025</small></p>
+            </div>
           </div>
         </div>
       </section>
-  
-      <!-- Content -->
-      <div class="content">
-        <!-- Quick Access Section -->
-        <section class="quick-access-section">
-          <h2>Transaksi Dalam Talian</h2>
-          
-          <div class="quick-access-cards">
-            <div class="quick-card">
-              <div class="card-icon"><fa-icon [icon]="faReceipt"></fa-icon></div>
-              <div class="card-content">
-                <h3>Saman</h3>
-                <p>Semak Saman Disini</p>
+
+      <!-- Quick Access Section -->
+      <section class="quick-access-section">
+        <h2>Transaksi Dalam Talian</h2>
+
+        <div class="quick-access-cards">
+          <div class="quick-card">
+            <div class="card-icon"><fa-icon [icon]="faReceipt"></fa-icon></div>
+            <div class="card-content">
+              <h3>Saman</h3>
+              <p>Semak Saman Disini</p>
+            </div>
+          </div>
+
+          <div class="quick-card">
+            <div class="card-icon"><fa-icon [icon]="faIdCard"></fa-icon></div>
+            <div class="card-content">
+              <h3>Lesen Memandu</h3>
+              <p>Muat Turun eBook</p>
+            </div>
+          </div>
+
+          <div class="quick-card">
+            <div class="card-icon"><fa-icon [icon]="faCar"></fa-icon></div>
+            <div class="card-content">
+              <h3>Nombor Kenderaan</h3>
+              <p>Semak Nombor Terkini</p>
+            </div>
+          </div>
+
+          <div class="quick-card">
+            <div class="card-icon"><fa-icon [icon]="faGavel"></fa-icon></div>
+            <div class="card-content">
+              <h3>JPJeBid</h3>
+              <p>JPJ eBid</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Tabs Section -->
+      <section class="services-tabs-section">
+        <h2>Perkhidmatan Kami</h2>
+
+        <div class="tabs-container">
+          <div class="tabs-nav">
+            <button class="tab-btn" [ngClass]="{'active': activeTabId === 'tab1'}" (click)="selectTab('tab1')">
+              <fa-icon [icon]="faShieldAlt"></fa-icon> &nbsp; Penguatkuasaan
+            </button>
+            <button class="tab-btn" [ngClass]="{'active': activeTabId === 'tab2'}" (click)="selectTab('tab2')">
+              <fa-icon [icon]="faIdCard"></fa-icon> &nbsp; Pelesenan Pemandu
+            </button>
+            <button class="tab-btn" [ngClass]="{'active': activeTabId === 'tab3'}" (click)="selectTab('tab3')">
+              <fa-icon [icon]="faCar"></fa-icon> &nbsp; Pelesenan Kenderaan
+            </button>
+            <button class="tab-btn" [ngClass]="{'active': activeTabId === 'tab4'}" (click)="selectTab('tab4')">
+              <fa-icon [icon]="faInfoCircle"></fa-icon> &nbsp; Perkhidmatan Umum
+            </button>
+          </div>
+
+          <div class="tab-content-container">
+            <div class="tab-content" [ngClass]="{'active': activeTabId === 'tab1'}" id="tab1">
+              <div class="services-grid">
+                <a [routerLink]="['/semakansaman']" routerLinkActive="active" class="service-item">
+                  <fa-icon [icon]="faSearch"></fa-icon>
+                  <span>Semakan Saman</span>
+                </a>
+                <a [routerLink]="['/#']" routerLinkActive="active" class="service-item">
+                  <fa-icon [icon]="faCreditCard"></fa-icon>
+                  <span>Bayaran Saman</span>
+                </a>
+                <a [routerLink]="['/#']" routerLinkActive="active" class="service-item">
+                  <fa-icon [icon]="faExclamationCircle"></fa-icon>
+                  <span>Semakan Mata Demerit</span>
+                </a>
+                <a [routerLink]="['/#']" routerLinkActive="active" class="service-item">
+                  <fa-icon [icon]="faList"></fa-icon>
+                  <span>Semakan Status Senarai Hitam</span>
+                </a>
               </div>
             </div>
-            
-            <div class="quick-card">
-              <div class="card-icon"><fa-icon [icon]="faIdCard"></fa-icon></div>
-              <div class="card-content">
-                <h3>Lesen Memandu</h3>
-                <p>Muat Turun eBook</p>
+
+            <div class="tab-content" [ngClass]="{'active': activeTabId === 'tab2'}" id="tab2">
+              <div class="services-grid">
+                <a [routerLink]="['/lesenMemandu']" routerLinkActive="active" class="service-item">
+                  <fa-icon [icon]="faIdCard"></fa-icon>
+                  <span>Semakan Lesen Memandu</span>
+                </a>
+                <a href="#" class="service-item">
+                  <fa-icon [icon]="faSync"></fa-icon>
+                  <span>Pembaharuan Lesen Memandu</span>
+                </a>
+                <a href="#" class="service-item">
+                  <fa-icon [icon]="faClipboardCheck"></fa-icon>
+                  <span>Semakan Keputusan Ujian</span>
+                </a>
+                <a href="#" class="service-item">
+                  <fa-icon [icon]="faFileAlt"></fa-icon>
+                  <span>Permohonan CDL</span>
+                </a>
+                <a href="#" class="service-item">
+                  <fa-icon [icon]="faMotorcycle"></fa-icon>
+                  <span>Semakan Kenderaan Program Khas Peralihan</span>
+                </a>
               </div>
             </div>
-            
-            <div class="quick-card">
-              <div class="card-icon"><fa-icon [icon]="faCar"></fa-icon></div>
-              <div class="card-content">
-                <h3>Nombor Kenderaan</h3>
-                <p>Semak Nombor Terkini</p>
+
+            <div class="tab-content" [ngClass]="{'active': activeTabId === 'tab3'}" id="tab3">
+              <div class="services-grid">
+                <a href="#" class="service-item">
+                  <fa-icon [icon]="faGavel"></fa-icon>
+                  <span>Bidaan Nombor Pendaftaran Kenderaan</span>
+                </a>
+                <a [routerLink]="['/lesenkenderaan']" class="service-item">
+                  <fa-icon [icon]="faSearch"></fa-icon>
+                  <span>Semakan Lesen Kenderaan Motor (LKM)</span>
+                </a>
+                <a href="#" class="service-item">
+                  <fa-icon [icon]="faSync"></fa-icon>
+                  <span>Pembaharuan Lesen Kenderaan Motor (LKM)</span>
+                </a>
+                <a href="#" class="service-item">
+                  <fa-icon [icon]="faCar"></fa-icon>
+                  <span>Semakan Nombor Pendaftaran Terkini</span>
+                </a>
               </div>
             </div>
-            
-            <div class="quick-card">
-              <div class="card-icon"><fa-icon [icon]="faGavel"></fa-icon></div>
-              <div class="card-content">
-                <h3>JPJeBid</h3>
-                <p>JPJ eBid</p>
+
+            <div class="tab-content" [ngClass]="{'active': activeTabId === 'tab4'}" id="tab4">
+              <div class="services-grid">
+                <a href="#" class="service-item">
+                  <fa-icon [icon]="faTicketAlt"></fa-icon>
+                  <span>JPJeQ</span>
+                </a>
+                <a href="#" class="service-item">
+                  <fa-icon [icon]="faHistory"></fa-icon>
+                  <span>Sejarah Transaksi</span>
+                </a>
+                <a href="#" class="service-item">
+                  <fa-icon [icon]="faCommentAlt"></fa-icon>
+                  <span>e-AduanJPJ</span>
+                </a>
               </div>
             </div>
           </div>
-        </section>
-  
-        <!-- Services Tabs Section -->
-        <section class="services-tabs-section">
-          <h2>Perkhidmatan Kami</h2>
-          
-          <div class="tabs-container">
-            <div class="tabs-nav">
-              <button class="tab-btn" [ngClass]="{'active': activeTabId === 'tab1'}" (click)="selectTab('tab1')">
-                <fa-icon [icon]="faShieldAlt"></fa-icon> &nbsp; Penguatkuasaan
-              </button>
-              <button class="tab-btn" [ngClass]="{'active': activeTabId === 'tab2'}" (click)="selectTab('tab2')">
-                <fa-icon [icon]="faIdCard"></fa-icon> &nbsp; Pelesenan Pemandu
-              </button>
-              <button class="tab-btn" [ngClass]="{'active': activeTabId === 'tab3'}" (click)="selectTab('tab3')">
-                <fa-icon [icon]="faCar"></fa-icon> &nbsp; Pelesenan Kenderaan
-              </button>
-              <button class="tab-btn" [ngClass]="{'active': activeTabId === 'tab4'}" (click)="selectTab('tab4')">
-                <fa-icon [icon]="faInfoCircle"></fa-icon> &nbsp; Perkhidmatan Umum
-              </button>
+        </div>
+      </section>
+
+      <!-- News Section - Improved with Angular-friendly controls -->
+      <section class="news-section">
+        <div class="section-header">
+          <h2>JPJ Malaysia News</h2>
+          <div class="news-controls">
+            <button class="news-nav-btn prev" (click)="scrollNewsLeft()">
+              <fa-icon [icon]="faChevronLeft"></fa-icon>
+            </button>
+            <button class="news-nav-btn next" (click)="scrollNewsRight()">
+              <fa-icon [icon]="faChevronRight"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="news-carousel">
+          <div class="news-card">
+            <div class="news-image">
+              <img src="assets/newroadtax.jpg" alt="JPJ Malaysia">
+              <div class="news-tag">New</div>
             </div>
-            
-            <div class="tab-content-container">
-              <div class="tab-content" [ngClass]="{'active': activeTabId === 'tab1'}" id="tab1">
-                <div class="services-grid">
-                  <a [routerLink]="['/semakansaman']" routerLinkActive="active" class="service-item">
-                    <fa-icon [icon]="faSearch"></fa-icon>
-                    <span>Semakan Saman</span>
-                  </a>
-                  <a [routerLink]="['/#']" routerLinkActive="active" class="service-item">
-                    <fa-icon [icon]="faCreditCard"></fa-icon>
-                    <span>Bayaran Saman</span>
-                  </a>
-                  <a [routerLink]="['/#']" routerLinkActive="active" class="service-item">
-                    <fa-icon [icon]="faExclamationCircle"></fa-icon>
-                    <span>Semakan Mata Demerit</span>
-                  </a>
-                  <a [routerLink]="['/#']" routerLinkActive="active" class="service-item">
-                    <fa-icon [icon]="faList"></fa-icon>
-                    <span>Semakan Status Senarai Hitam</span>
-                  </a>
+            <div class="news-content">
+              <h3>JPJ Introduces New Digital Road Tax</h3>
+              <p>JPJ Malaysia has announced a new digital road tax system to simplify vehicle registration...</p>
+
+              <div class="news-footer">
+                <div class="news-info">
+                  <span><fa-icon [icon]="faCalendarAlt"></fa-icon> March 21, 2025</span>
+                  <span><fa-icon [icon]="faUser"></fa-icon> JPJ Malaysia</span>
                 </div>
-              </div>
-              
-              <div class="tab-content" [ngClass]="{'active': activeTabId === 'tab2'}" id="tab2">
-                <div class="services-grid">
-                  <a href="#" class="service-item">
-                    <fa-icon [icon]="faIdCard"></fa-icon>
-                    <span>Semakan Lesen Memandu</span>
-                  </a>
-                  <a href="#" class="service-item">
-                    <fa-icon [icon]="faSync"></fa-icon>
-                    <span>Pembaharuan Lesen Memandu</span>
-                  </a>
-                  <a href="#" class="service-item">
-                    <fa-icon [icon]="faClipboardCheck"></fa-icon>
-                    <span>Semakan Keputusan Ujian</span>
-                  </a>
-                  <a href="#" class="service-item">
-                    <fa-icon [icon]="faFileAlt"></fa-icon>
-                    <span>Permohonan CDL</span>
-                  </a>
-                  <a href="#" class="service-item">
-                    <fa-icon [icon]="faMotorcycle"></fa-icon>
-                    <span>Semakan Kenderaan Program Khas Peralihan</span>
-                  </a>
-                </div>
-              </div>
-              
-              <div class="tab-content" [ngClass]="{'active': activeTabId === 'tab3'}" id="tab3">
-                <div class="services-grid">
-                  <a href="#" class="service-item">
-                    <fa-icon [icon]="faGavel"></fa-icon>
-                    <span>Bidaan Nombor Pendaftaran Kenderaan</span>
-                  </a>
-                  <a [routerLink]="['/lesenkenderaan']"class="service-item">
-                    <fa-icon [icon]="faSearch"></fa-icon>
-                    <span>Semakan Lesen Kenderaan Motor (LKM)</span>
-                  </a>
-                  <a href="#" class="service-item">
-                    <fa-icon [icon]="faSync"></fa-icon>
-                    <span>Pembaharuan Lesen Kenderaan Motor (LKM)</span>
-                  </a>
-                  <a href="#" class="service-item">
-                    <fa-icon [icon]="faCar"></fa-icon>
-                    <span>Semakan Nombor Pendaftaran Terkini</span>
-                  </a>
-                </div>
-              </div>
-              
-              <div class="tab-content" [ngClass]="{'active': activeTabId === 'tab4'}" id="tab4">
-                <div class="services-grid">
-                  <a href="#" class="service-item">
-                    <fa-icon [icon]="faTicketAlt"></fa-icon>
-                    <span>JPJeQ</span>
-                  </a>
-                  <a href="#" class="service-item">
-                    <fa-icon [icon]="faHistory"></fa-icon>
-                    <span>Sejarah Transaksi</span>
-                  </a>
-                  <a href="#" class="service-item">
-                    <fa-icon [icon]="faCommentAlt"></fa-icon>
-                    <span>e-AduanJPJ</span>
-                  </a>
-                </div>
+                <a href="#" class="read-more">Read More <fa-icon [icon]="faArrowRight"></fa-icon></a>
               </div>
             </div>
           </div>
-        </section>
-  
-        <!-- News Section - Improved with Angular-friendly controls -->
-        <section class="news-section">
-          <div class="section-header">
-            <h2>JPJ Malaysia News</h2>
-            <div class="news-controls">
-              <button class="news-nav-btn prev" (click)="scrollNewsLeft()">
-                <fa-icon [icon]="faChevronLeft"></fa-icon>
-              </button>
-              <button class="news-nav-btn next" (click)="scrollNewsRight()">
-                <fa-icon [icon]="faChevronRight"></fa-icon>
-              </button>
+
+          <div class="news-card">
+            <div class="news-image">
+              <img src="assets/vehicleinspection.jpg" alt="Vehicle Inspection">
             </div>
-          </div>
-          
-          <div class="news-carousel">
-            <div class="news-card">
-              <div class="news-image">
-                <img src="assets/newroadtax.jpg" alt="JPJ Malaysia">
-                <div class="news-tag">New</div>
-              </div>
-              <div class="news-content">
-                <h3>JPJ Introduces New Digital Road Tax</h3>
-                <p>JPJ Malaysia has announced a new digital road tax system to simplify vehicle registration...</p>
-                
-                <div class="news-footer">
-                  <div class="news-info">
-                    <span><fa-icon [icon]="faCalendarAlt"></fa-icon> March 21, 2025</span>
-                    <span><fa-icon [icon]="faUser"></fa-icon> JPJ Malaysia</span>
-                  </div>
-                  <a href="#" class="read-more">Read More <fa-icon [icon]="faArrowRight"></fa-icon></a>
+            <div class="news-content">
+              <h3>New Vehicle Inspection Guidelines</h3>
+              <p>JPJ Malaysia has updated vehicle inspection rules to enhance road safety and compliance...</p>
+
+              <div class="news-footer">
+                <div class="news-info">
+                  <span><fa-icon [icon]="faCalendarAlt"></fa-icon> March 21, 2025</span>
+                  <span><fa-icon [icon]="faUser"></fa-icon> JPJ Malaysia</span>
                 </div>
-              </div>
-            </div>
-            
-            <div class="news-card">
-              <div class="news-image">
-                <img src="assets/vehicleinspection.jpg" alt="Vehicle Inspection">
-              </div>
-              <div class="news-content">
-                <h3>New Vehicle Inspection Guidelines</h3>
-                <p>JPJ Malaysia has updated vehicle inspection rules to enhance road safety and compliance...</p>
-                
-                <div class="news-footer">
-                  <div class="news-info">
-                    <span><fa-icon [icon]="faCalendarAlt"></fa-icon> March 21, 2025</span>
-                    <span><fa-icon [icon]="faUser"></fa-icon> JPJ Malaysia</span>
-                  </div>
-                  <a href="#" class="read-more">Read More <fa-icon [icon]="faArrowRight"></fa-icon></a>
-                </div>
-              </div>
-            </div>
-            
-            <div class="news-card">
-              <div class="news-image">
-                <img src="assets/roadblock.jpg" alt="JPJ Roadblock">
-              </div>
-              <div class="news-content">
-                <h3>JPJ Conducts Nationwide Roadblocks</h3>
-                <p>JPJ Malaysia has initiated roadblocks to ensure compliance with road regulations...</p>
-                
-                <div class="news-footer">
-                  <div class="news-info">
-                    <span><fa-icon [icon]="faCalendarAlt"></fa-icon> March 21, 2025</span>
-                    <span><fa-icon [icon]="faUser"></fa-icon> JPJ Malaysia</span>
-                  </div>
-                  <a href="#" class="read-more">Read More <fa-icon [icon]="faArrowRight"></fa-icon></a>
-                </div>
+                <a href="#" class="read-more">Read More <fa-icon [icon]="faArrowRight"></fa-icon></a>
               </div>
             </div>
           </div>
-        </section>
-      </div>
-    </main>
-  </div>
+
+          <div class="news-card">
+            <div class="news-image">
+              <img src="assets/roadblock.jpg" alt="JPJ Roadblock">
+            </div>
+            <div class="news-content">
+              <h3>JPJ Conducts Nationwide Roadblocks</h3>
+              <p>JPJ Malaysia has initiated roadblocks to ensure compliance with road regulations...</p>
+
+              <div class="news-footer">
+                <div class="news-info">
+                  <span><fa-icon [icon]="faCalendarAlt"></fa-icon> March 21, 2025</span>
+                  <span><fa-icon [icon]="faUser"></fa-icon> JPJ Malaysia</span>
+                </div>
+                <a href="#" class="read-more">Read More <fa-icon [icon]="faArrowRight"></fa-icon></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</div>

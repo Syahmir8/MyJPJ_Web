@@ -30,5 +30,6 @@ export const routes: Routes = [
     { path: 'pemilikan', component: PemilikanComponent },
     { path: 'peti-masuk', component: PetiMasukComponent },
     { path: 'profil', component: ProfilComponent },
-    { path: 'detail-negeri', component: DetailNegeriComponent },
+    { path: 'detail-negeri',component: DetailNegeriComponent },
 ];
+    
